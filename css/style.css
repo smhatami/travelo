@@ -1,0 +1,331 @@
+@import "font-awesome.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 14px;
+}
+
+img{
+    width: 100%!important;
+    height: auto!important;
+}
+
+/* Header: */
+
+a {
+    text-decoration: none !important;
+    transition: color .3s !important;
+    color: black !important;
+}
+
+li:hover,
+li a:hover {
+    color: #dc3545 !important;
+}
+
+li {
+    list-style-type: none;
+    cursor: pointer;
+    transition: color .3s !important;
+    font-weight: 500 !important;
+}
+
+.btn {
+    border: 0 !important;
+    transition: background .3s !important;
+    color: white !important;
+}
+
+.btn-info:hover {
+    background: #dc3545 !important;
+}
+
+.btn-danger:hover {
+    background: #17a2b8 !important;
+}
+
+.nav-menu {
+    gap: 2rem;
+}
+
+.fixed-nav{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    padding: 0 10%;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4), 0 1px 12px;
+    z-index: 9999!important;
+    animation: toBottom .3s;
+    top: 0;
+}
+.fixed-col-nav{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4), 0 1px 12px;
+    z-index: 9998!important;
+    animation: colNavToBottom .7s;
+    top: 55px;
+}
+
+@keyframes toBottom {
+    0%{
+        top: -72px;
+    }
+    100%{
+        top: 0;
+    }    
+}
+@keyframes colNavToBottom {
+    0%{
+        top: -224px;
+    }
+    100%{
+        top: 55px;
+    }
+}
+@keyframes colNavToTop {
+    0%{
+        top: 55px;
+    }
+    100%{
+
+    }
+}
+
+.nav-menu-ex {
+    gap: 1rem;
+    background: #eee;
+}
+
+/* End Header */
+
+/* ******************************************************************** */
+
+/* main: */
+
+    /* slider: */
+.slider {
+    background: url('../images/banner2.png') no-repeat center;
+    height: 50vw;
+}
+
+@media (min-width: 1296.98px) {
+
+    .slider {
+        height: 40vw;
+    }
+
+}
+
+.slider-btn a {
+    font-size: 2.5vw;
+}
+
+@media (min-width: 991.98px) {
+
+    .slider-btn a {
+        font-size: 1.8rem !important;
+    }
+
+}
+
+.beauti-txt {
+    font-size: 8vw !important;
+    font-family: "Nothing You Could Do", cursive !important;
+    font-weight: 400 !important;
+}
+
+.slider-lbl {
+    font-size: 3vw !important;
+}
+
+    /* End slider */
+
+    /* search bar: */
+
+.search-bar {
+    background: #040e27;
+}
+
+.search-form {
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+    /* End search bar */
+
+    /* destination | popular destination: */
+
+.main-section-title {
+    font-size: 2rem;
+}
+
+.discription {
+    font-size: 16px;
+    color: #7a838b;
+}
+
+    /* End destination | popular destination */
+
+.d-image-info {
+    color: white !important;
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    z-index: 999;
+}
+
+.d-image-info a {
+    border-radius: 30px;
+    margin-top: 2px;
+}
+
+.d-image-info p {
+    font-size: 1.3rem;
+    transition: all .3s;
+}
+
+.d-container {
+    gap: 1rem;
+}
+
+.d-container-item {
+    cursor: pointer;
+    transition: all .3s;
+    position: relative;
+}
+
+.d-container-item:hover {
+    transform: translateY(-10px);
+}
+
+.d-container-item::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(4, 14, 39, 0.2) 30%, rgba(4, 14, 39, .7) 70%);
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+.d-container-item:hover:before {
+    opacity: 0 !important;
+}
+
+.background {
+    background: none !important;
+    border-radius: 30px;
+}
+
+.d-container-item:hover .background {
+
+    background: #dc3545 !important;
+
+}
+
+    /* newsletter: */
+
+.newsletter {
+    background: url('../images/newsletter.png');
+    background-position: 65% 60% !important;
+    background-size: cover;
+    position: relative;
+}
+
+.newsletter-container {
+    z-index: 999 !important;
+    color: white;
+}
+
+.newsletter::before {
+    position: absolute;
+    content: '';
+    background-color: #040e27;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+}
+
+.newsletter-btn {
+    margin-top: 2px;
+}
+
+    /* End newsletter */
+
+    /* video: */
+
+.video-txt {
+    font-size: 6vw !important;
+    font-family: "Nothing You Could Do", cursive !important;
+}
+
+.video-play-icon {
+    font-size: 16px;
+    transition: all .3s;
+}
+
+.video-container {
+    background: url('../images/video.png') no-repeat;
+    background-position: 65% 30%;
+    height: 400px;
+    position: relative;
+}
+
+.video-container::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #040e27 ;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    opacity: .4;
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+.video-container h3,.video-container a{
+    z-index: 999;
+}
+
+    /* End video */
+
+/* End main */
+
+/* ******************************************************************** */
+
+/* footer: */
+
+.right-footer-menu{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: .5rem 4rem;
+}
+.footer-info{
+line-height: 2rem;
+}
+.footer-name-a{
+    transition: .3s;
+    cursor: pointer;
+}
+
+.footer-name-a:hover{
+    color: white!important;
+}
+/* End footer */
